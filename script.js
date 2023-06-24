@@ -2,13 +2,13 @@
 const age = document.getElementById("age").value
 const name = document.getElementById("name").value
 const btn = document.getElementById("btn");
-btn.addEventListener('submit',(event) => {
+document.getElementById('myform').addEventListener('submit',(event) => {
 	event.preventDefault();
 })
 
 var promise = new Promise(function(resolve, reject) {
         setTimeout(function() {
-          if (parseInt(age) >= 18) {
+          if (parseInt(age) > 18) {
             resolve(name);
           } else {
             reject(name);
